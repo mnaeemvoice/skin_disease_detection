@@ -1,0 +1,12 @@
+<h2>Predicted Disease: {{ predicted_disease }}</h2>
+
+{% if products %}
+    <h3>Recommended Beauty Products:</h3>
+    <ul>
+        {% for product in products %}
+            <li><strong>{{ product.name }}</strong>: {{ product.description }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No products found for this disease.</p>
+{% endif %}
